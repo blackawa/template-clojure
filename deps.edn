@@ -1,0 +1,16 @@
+{:deps
+ {ring/ring {:mvn/version "1.9.5"}
+  org.postgresql/postgresql {:mvn/version "42.4.0"}
+  thheller/shadow-cljs {:mvn/version "2.19.5"}}
+ 
+ :paths ["src/clj" "src/cljc"]
+ 
+ :aliases
+{:dev
+ {:paths ["src/dev"]}
+ :lint
+ {:replace-deps {clj-kondo/clj-kondo {:mvn/version "RELEASE"}}
+  :main-opts ["-m" "clj-kondo.main" "--lint" "src"]}
+ :format
+ {:replace-deps {cljfmt/cljfmt {:mvn/version "0.8.2"}}
+  :main-opts ["-m" "cljfmt.main" "fix"]}}}
