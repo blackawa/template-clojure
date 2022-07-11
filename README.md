@@ -14,9 +14,6 @@ Click the button below to start a new development environment:
 
 ### 1. Start API Server
 
-Open command pallet(`Ctrl+Shift+P`) and type `Calva: start jack-in`.
-Then,
-
 1. Open command pallet and select `Calva: Start a Project REPL and Connect (aka Jack-in)` (`Ctrl+Alt+C > Ctrl+Alt+J`).
 1. Choose `deps.edn` --> `:dev`. You now have a REPL session file.
 1. Open `dev/src/user.clj`.

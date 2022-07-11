@@ -1,1 +1,1 @@
-(ns main.cljs.jp.blackawa.write-clojure-with-menty.app)
+(ns cljs.jp.blackawa.write-clojure-with-menty.app)

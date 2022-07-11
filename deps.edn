@@ -1,7 +1,8 @@
 {:deps
  {ring/ring {:mvn/version "1.9.5"}
   org.postgresql/postgresql {:mvn/version "42.4.0"}
-  thheller/shadow-cljs {:mvn/version "2.19.5"}}
+  thheller/shadow-cljs {:mvn/version "2.19.5"}
+  metosin/reitit {:mvn/version "0.5.18"}}
  
  :paths ["src/clj" "src/cljc"]
  
