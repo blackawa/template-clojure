@@ -1,15 +1,17 @@
 (ns jp.blackawa.write-clojure-with-menty.handler 
-  (:require [reitit.ring :as ring]))
+  (:require [clojure.java.io :as io]
+            [reitit.ring :as ring]))
 
-(defn index-page
+(defn app-page
   [req]
-  (println "request:" req)
   {:status 200
    :content-type "text/html"
-   :body "<!doctype html><html><body><h1>Hello from clojure!!</h1></body></html>"})
+   :body (slurp (io/resource "index.html"))})
 
 (def routing
   (ring/ring-handler
    (ring/router
-    [["/" {:get index-page}]
-     ["/public/*" (ring/create-resource-handler)]])))
+    [["/"
+      ["app/*" {:get app-page}]
+      ["assets/*" (ring/create-resource-handler)]]])
+   (constantly {:status 404, :body ""})))

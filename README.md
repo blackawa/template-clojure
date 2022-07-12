@@ -19,9 +19,9 @@ Click the button below to start a new development environment:
 1. Open `dev/src/user.clj`.
 1. Open command pallet and select `Calva: Load/Evaluate Current file and its Requires/Dependencies` (`Ctrl+Alt+C > Enter`) .
 
-To start compiling ClojureScript, run
+### 2. Start CLJS build
 
-    npm run dev
+    user=> (start-cljs!)
 
 ## To lint
 

@@ -6,6 +6,5 @@
 
 (defn start-cljs!
   []
-  ;; (shadow-server/start!)
-  ;; (shadow-api/watch :app)
-  )
+  (shadow-server/start!)
+  (shadow-api/watch :app))
