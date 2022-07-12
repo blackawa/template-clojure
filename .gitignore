@@ -16,3 +16,6 @@ pom.xml.asc
 .lsp/.cache
 node_modules/
 package-lock.json
+.calva/output-window
+.shadow-cljs
+resources/public/js

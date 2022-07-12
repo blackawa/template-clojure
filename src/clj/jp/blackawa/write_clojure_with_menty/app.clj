@@ -1,23 +1,26 @@
 (ns jp.blackawa.write_clojure_with_menty.app
-  (:require [ring.adapter.jetty :refer [run-jetty]]))
+  (:require [ring.adapter.jetty :refer [run-jetty]]
+            [jp.blackawa.write-clojure-with-menty.handler :refer [routing]]))
 
 (defonce server
   (atom nil))
 
 (defn start!
   []
-  (reset! server (run-jetty (fn [req]
-                              (println "request:" req)
-                              {:status 200
-                               :content-type "text/html"
-                               :body "<!doctype html><html><body><h1>Hello from clojure!</h1></body></html>"})
+  (reset! server (run-jetty routing
                             {:port 3000
-                             :join false})))
+                             :join? false})))
 
 (defn stop!
   []
   (.stop @server)
   (reset! server nil))
+
+(defn reset!
+  []
+  (when @server
+    (stop!))
+  (start!))
 
 (defn -main
   [& _]

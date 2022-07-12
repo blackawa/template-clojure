@@ -1,10 +1,16 @@
 {:deps true
- 
+
  :source-paths
  ["src/cljs"
   "test/cljs"]
 
- :dependencies
- [[cljs-http "0.1.46"]
-  [metosin/reitit "0.5.18"]
-  [rum "0.12.9"]]}
+;;  :dependencies
+;;  [[cljs-http "0.1.46"]
+;;   [metosin/reitit "0.5.18"]
+;;   [rum "0.12.9"]]
+
+ :builds
+ {:app {:target :browser
+        :output-dir "resources/public/js"
+        :modules {:main {:init-fn jp.blackawa.write-clojure-with-menty.app/init}}
+        :js-options {:babel-preset-config {:targets {:chrome 80}}}}}}
