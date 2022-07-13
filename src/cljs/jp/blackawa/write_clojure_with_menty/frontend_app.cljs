@@ -1,4 +1,4 @@
-(ns jp.blackawa.write-clojure-with-menty.app)
+(ns jp.blackawa.write-clojure-with-menty.frontend-app)
 
 (defn init
   []

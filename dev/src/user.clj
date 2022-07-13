@@ -1,10 +1,8 @@
 (ns user
-  (:require [jp.blackawa.write_clojure_with_menty.app :refer [server reset!]]
-            [shadow.cljs.devtools.api :as shadow-api]
-            [shadow.cljs.devtools.server :as shadow-server]
-            ))
+  (:require [clojure.tools.namespace.repl :refer [refresh]]))
 
-(defn start-cljs!
+(defn dev
   []
-  (shadow-server/start!)
-  (shadow-api/watch :app))
+  (require 'dev)
+  (in-ns 'dev)
+  :loaded)
