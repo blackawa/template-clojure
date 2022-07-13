@@ -5,20 +5,20 @@
   metosin/reitit {:mvn/version "0.5.18"}
   cljs-http/cljs-http {:mvn/version "0.1.46"}
   rum/rum {:mvn/version "0.12.9"}}
- 
+
  :paths [:backend-paths
          :frontend-paths
          :resource-paths]
- 
+
  :aliases
-{:backend-paths ["src/clj" "test/clj" "src/cljc" "test/cljc"] 
- :frontend-paths ["src/cljs" "test/cljs" "src/cljc" "test/cljc"]
- :resource-paths ["resources"]
- :dev
- {:extra-paths ["dev/src"]}
- :lint
- {:replace-deps {clj-kondo/clj-kondo {:mvn/version "RELEASE"}}
-  :main-opts ["-m" "clj-kondo.main" "--lint" "src"]}
- :format
- {:replace-deps {cljfmt/cljfmt {:mvn/version "0.8.2"}}
-  :main-opts ["-m" "cljfmt.main" "fix"]}}}
+ {:backend-paths ["src/clj" "test/clj" "src/cljc" "test/cljc"]
+  :frontend-paths ["src/cljs" "test/cljs" "src/cljc" "test/cljc"]
+  :resource-paths ["resources"]
+  :dev
+  {:extra-paths ["dev/src"]}
+  :lint
+  {:replace-deps {clj-kondo/clj-kondo {:mvn/version "RELEASE"}}
+   :main-opts ["-m" "clj-kondo.main" "--lint" "src"]}
+  :format
+  {:replace-deps {cljfmt/cljfmt {:mvn/version "0.8.2"}}
+   :main-opts ["-m" "cljfmt.main" "fix"]}}}
