@@ -21,8 +21,6 @@ Click the button below to start a new development environment:
 1. Run `(reset-system)`.
 1. Open http://localhost:3000/app/
 
-
-
 ### 2. Start CLJS build
 
     user=> (start-cljs!)
