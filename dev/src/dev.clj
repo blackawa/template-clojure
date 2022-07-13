@@ -14,4 +14,6 @@
   []
   (stop-backend!)
   (refresh)
-  (start-backend!))
+  (start-backend!)
+  ;; (start-frontend!)
+  )

@@ -12,12 +12,16 @@ Click the button below to start a new development environment:
 
 ## To code
 
-### 1. Start API Server
+### 1. Start server
 
 1. Open command pallet and select `Calva: Start a Project REPL and Connect (aka Jack-in)` (`Ctrl+Alt+C > Ctrl+Alt+J`).
 1. Choose `deps.edn` --> `:dev`. You now have a REPL session file.
-1. Open `dev/src/user.clj`.
-1. Open command pallet and select `Calva: Load/Evaluate Current file and its Requires/Dependencies` (`Ctrl+Alt+C > Enter`) .
+1. Run `(dev)`.
+1. Run `(refresh)`.
+1. Run `(reset-system)`.
+1. Open http://localhost:3000/app/
+
+
 
 ### 2. Start CLJS build
 
