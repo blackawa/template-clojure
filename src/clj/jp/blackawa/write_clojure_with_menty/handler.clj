@@ -9,7 +9,8 @@
   []
   [:html
    [:body
-    [:h1 "Hello from Clojure!"]]])
+    [:h1 "Hello from Clojure!"]
+    [:script {:src "/js/main.js"}]]])
 
 (defn app-page
   [req]
