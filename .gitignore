@@ -19,3 +19,4 @@ package-lock.json
 .calva/output-window
 .shadow-cljs
 resources/public/js
+*.mv.db

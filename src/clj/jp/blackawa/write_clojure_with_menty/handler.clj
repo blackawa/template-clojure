@@ -1,18 +1,49 @@
 (ns jp.blackawa.write-clojure-with-menty.handler 
-  (:require [clojure.java.io :as io]
-            [reitit.ring :as ring]))
+  (:require [clojure.data.json :as json]
+            [next.jdbc :as jdbc]
+            [reitit.ring :as ring]
+            [rum.core :refer [defc render-static-markup]]
+            [jp.blackawa.write-clojure-with-menty.system :refer [system]]))
+
+(defc app-html []
+  [:html
+   [:body
+    [:h1 "Hello from Clojure!"]]])
 
 (defn app-page
   [req]
-  (println "req:" req)
   {:status 200
    :content-type "text/html"
-   :body (slurp (io/resource "index.html"))})
+   :body (render-static-markup (app-html))})
+
+(defn index
+  [req]
+  (let [ds (:datasource @system)]
+    {:status 200
+     :headers {"content-type" "application/json"}
+     :body (json/write-str {:found (jdbc/execute! ds ["select * from tasks"])})}))
+
+(defn fetch
+  [req])
+
+(defn create!
+  [req])
+
+(defn update!
+  [req])
+
+(defn delete!
+  [req])
 
 (def routing
   (ring/ring-handler
    (ring/router
-    [["/api/_health" {:get (fn [req] (println req) {:status 200 :body "healthy"})}]
+    [["/api"
+      ["/tasks" {:get index
+                 :post create!}]
+      ["/task/:task-id" {:get fetch
+                         :put update!
+                         :delete delete!}]]
      ["/app/*" {:get app-page}]
      ["/*" (ring/create-resource-handler)]]
     {:conflicts (constantly nil)})
