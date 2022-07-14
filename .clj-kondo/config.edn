@@ -1,0 +1,1 @@
+{:lint-as {rum.core/defc clojure.core/defn}}

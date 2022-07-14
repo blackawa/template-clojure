@@ -1,6 +1,7 @@
 (ns jp.blackawa.write-clojure-with-menty.migration
   (:require [next.jdbc :as jdbc]))
 
+#_{:clj-kondo/ignore [:clojure-lsp/unused-public-var]}
 (defn create-tasks-table
   [system]
   (if-let [ds (:datasource @system)]
