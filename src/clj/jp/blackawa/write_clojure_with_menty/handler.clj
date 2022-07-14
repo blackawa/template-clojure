@@ -5,7 +5,8 @@
             [rum.core :refer [defc render-static-markup]]
             [jp.blackawa.write-clojure-with-menty.system :refer [system]]))
 
-(defc app-html []
+(defc app-html
+  []
   [:html
    [:body
     [:h1 "Hello from Clojure!"]]])

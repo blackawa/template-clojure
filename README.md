@@ -1,6 +1,6 @@
 # Clojureを一緒に書こう
 
-[Clojure](https://clojure.org/)を誰か先輩と一緒に書いて入門してみるためのリポジトリです。GitPodのShare機能を利用したペアプログラミングを想定しています。
+[Clojure](https://clojure.org/)を先輩とペアプロして入門するための学習用リポジトリです。GitPodのShare機能を利用することを想定しています。
 
 ## 始めてみよう
 
@@ -32,3 +32,18 @@
     $ clj -M:lint
     # フォーマッターを実行する
     $ clj -M:format
+
+# TODO
+
+下記の課題を、先輩と一緒に解いてみましょう。
+
+- [ ] タスクを登録できる
+- [ ] タスクを一覧できる
+- [ ] タスクを更新できる
+- [ ] タスクを削除できる
+- [ ] JSON文字列に加工する処理をMiddlewareにまとめる
+- [ ] [tonsky/rum](https://github.com/tonsky/rum)を使ってReactアプリを起動する
+- [ ] Reactアプリでタスクを一覧できる
+- [ ] Reactアプリでタスクを登録できる
+- [ ] Reactアプリでタスクを変更できる
+- [ ] Reactアプリでタスクを削除できる

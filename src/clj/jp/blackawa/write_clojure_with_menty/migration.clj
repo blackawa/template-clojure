@@ -7,6 +7,7 @@
     (jdbc/execute! ds ["create table tasks (
                           id int primary key auto_increment,
                           title varchar(128) not null,
-                          description varchar(1024)
+                          description varchar(1024),
+                          completed_at timestamp
                         )"])
     ::datasource-is-not-created))
