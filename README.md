@@ -6,7 +6,7 @@
 
 下のボタンをクリックして、新しいGitPodワークスペースを作成しましょう:
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/blackawa/write-clojure-with-your-menty)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/blackawa/write-clojure-with-menty)
 
 # 開発
 
