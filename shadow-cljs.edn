@@ -1,13 +1,14 @@
-{:deps true
+{
+;;  :deps true
 
  :source-paths
  ["src/cljs"
   "test/cljs"]
 
-;;  :dependencies
-;;  [[cljs-http "0.1.46"]
-;;   [metosin/reitit "0.5.18"]
-;;   [rum "0.12.9"]]
+ :dependencies
+ [[cljs-http "0.1.46"]
+  [metosin/reitit "0.5.18"]
+  [rum "0.12.9"]]
 
  :builds
  {:frontend-app {:target :browser

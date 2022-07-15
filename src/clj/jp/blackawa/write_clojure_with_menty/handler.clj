@@ -1,4 +1,4 @@
-(ns jp.blackawa.write-clojure-with-menty.handler 
+(ns jp.blackawa.write-clojure-with-menty.handler
   (:require [clojure.data.json :as json]
             [next.jdbc :as jdbc]
             [reitit.ring :as ring]

@@ -9,12 +9,10 @@
   thheller/shadow-cljs {:mvn/version "2.19.5"}}
 
  :paths [:backend-paths
-         :frontend-paths
          :resource-paths]
 
  :aliases
  {:backend-paths ["src/clj" "test/clj" "src/cljc" "test/cljc"]
-  :frontend-paths ["src/cljs" "test/cljs" "src/cljc" "test/cljc"]
   :resource-paths ["resources"]
   :dev
   {:extra-paths ["dev/src"]}
