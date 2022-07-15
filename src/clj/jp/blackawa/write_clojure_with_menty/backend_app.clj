@@ -9,8 +9,8 @@
   (if @system
     ::already-running
     (reset! system {:server (run-jetty #'routing
-                               {:port 8080
-                                :join? false})
+                                       {:port 8080
+                                        :join? false})
                     :datasource (jdbc/get-datasource {:dbtype "h2"
                                                       :dbname "app"})})))
 
