@@ -1,3 +1,2 @@
-:devtools {:use-document-protocol true
-           ;; shadow-cljsを起動した時にGitPodが発行してくれるURLで置換する
-           :devtools-url "https://9630-username-appname-id.region.gitpod.io"}
+{:devtools {:use-document-protocol true
+            :devtools-url "https://9630-username-appname-id.region.gitpod.io"}}

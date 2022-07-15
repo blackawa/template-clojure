@@ -2,22 +2,15 @@
   (:require [clojure.data.json :as json]
             [next.jdbc :as jdbc]
             [reitit.ring :as ring]
-            [rum.core :refer [defc render-static-markup]]
-            [jp.blackawa.write-clojure-with-menty.system :refer [system]]))
-
-(defc app-html
-  []
-  [:html
-   [:body
-    [:h1 "Hello from Clojure!"]
-    [:#app]
-    [:script {:src "/js/main.js"}]]])
+            [rum.core :refer [render-static-markup]]
+            [jp.blackawa.write-clojure-with-menty.system :refer [system]]
+            [jp.blackawa.write-clojure-with-menty.view :as view]))
 
 (defn app-page
-  [req]
+  [_]
   {:status 200
    :content-type "text/html"
-   :body (render-static-markup (app-html))})
+   :body (render-static-markup (view/app))})
 
 (defn index
   [req]

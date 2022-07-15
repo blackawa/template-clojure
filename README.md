@@ -10,23 +10,36 @@
 
 # 開発
 
-## コードを書く
+## バックエンド
 
-### 1. バックエンドサーバーを起動する
+### 1. 起動する
 
 1. コマンドパレットを開き `Calva: Start a Project REPL and Connect (aka Jack-in)` (`Ctrl+Alt+C > Ctrl+Alt+J`) を選択する.
 1. `deps.edn` --> `:dev` を選ぶ。すると `output.calva-repl` というファイルが開き、 `clj:user:>` という文字列が表示される。
 1. `(dev)` を実行する。
 1. `(reset)` を実行する。
 
-### 2. （初回のみ）マイグレーションを実行する
+### 2. (初回のみ)マイグレーションを実行する
 
 1. `output.calva-repl` ファイルで `(migration/create-tasks-table system)` を実行する。
 
-### 2. コードを変更する
+### 3. コードを変更する
 
 コードを変更したら、ファイルをREPLにロードします。
 コマンドパレットを開き、 `Calva: Load/Evaluate Current File and its Requires/Dependencies` ( `Ctrl+Alt+C > Enter` ) を選択します。
+
+## フロントエンド
+
+### 1. 起動する
+
+    npm run dev:gitpod
+
+GitPodがURLを公開するか聞いてくるので、 `Open Browser` を選択する。
+これ以降、コードを変更して保存するたびにホットリロードが走る。
+
+### 2. (初回のみ) `gitpod.edn` を編集する
+
+GitPodのワークスペースが発行したURLを `gitpod.edn` に書き込む。
 
 ## 静的解析をかける
 
