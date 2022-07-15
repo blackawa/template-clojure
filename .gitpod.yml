@@ -5,3 +5,4 @@ vscode:
   extensions:
     - betterthantomorrow.calva
     - GitHub.github-vscode-theme
+    - mhutchie.git-graph
