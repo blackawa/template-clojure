@@ -12,14 +12,16 @@
 
 ## コードを書く
 
-### 1. サーバーを起動する
+### 1. バックエンドサーバーを起動する
 
 1. コマンドパレットを開き `Calva: Start a Project REPL and Connect (aka Jack-in)` (`Ctrl+Alt+C > Ctrl+Alt+J`) を選択する.
-1. `deps.edn` --> `:dev` を選ぶ。すると `output.calva-repl` というファイルが開き、 `clj:user:>` というREPLセッションが開く。
+1. `deps.edn` --> `:dev` を選ぶ。すると `output.calva-repl` というファイルが開き、 `clj:user:>` という文字列が表示される。
 1. `(dev)` を実行する。
-1. `(start-backend!)` を実行する。
-1. (初回のみ)  `(migration/create-tasks-table system)` を実行する。
-1. Open http://localhost:3000/app/
+1. `(reset)` を実行する。
+
+### 2. （初回のみ）マイグレーションを実行する
+
+1. `output.calva-repl` ファイルで `(migration/create-tasks-table system)` を実行する。
 
 ### 2. コードを変更する
 
@@ -47,3 +49,10 @@
 - [ ] Reactアプリでタスクを登録できる
 - [ ] Reactアプリでタスクを変更できる
 - [ ] Reactアプリでタスクを削除できる
+
+# 今後の改善点
+
+- [ ] 単体テストを書く。
+- [ ] REPLに慣れるための `Fire Up Clojure REPL` を使った練習問題を入れる。かつ、REPLとテキストに差分があることを表現する説明を入れる。
+- [ ] integrantを使ったコードに変換する。
+- [ ] cljcに書いたspecをAPIインターフェースとして利用する。
