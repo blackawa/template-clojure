@@ -1,13 +1,13 @@
 {
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
     "shadow-cljs": "^2.19.5"
   },
   "scripts": {
     "dev:local": "shadow-cljs watch frontend-app",
     "dev:gitpod": "shadow-cljs watch frontend-app --config-merge \"$(cat gitpod.edn)\""
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   }
 }
