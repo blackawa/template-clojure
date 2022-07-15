@@ -1,7 +1,4 @@
-{
-;;  :deps true
-
- :source-paths
+{:source-paths
  ["src/cljs"
   "test/cljs"]
 
